@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-heimlig') {
+orgs.newOrg('automotive.heimlig', 'eclipse-heimlig') {
   settings+: {
     description: "",
     name: "Eclipse Heimlig",
