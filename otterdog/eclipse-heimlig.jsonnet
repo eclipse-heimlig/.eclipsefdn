@@ -13,6 +13,13 @@ orgs.newOrg('automotive.heimlig', 'eclipse-heimlig') {
     orgs.newRepo('heimlig') {
       allow_update_branch: false,
       web_commit_signoff_required: false,
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          requires_pull_request: true,
+          allows_force_pushes: false,
+          required_approving_review_count: 1,
+        },
+      ],
     },
   ],
 } + {
